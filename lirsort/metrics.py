@@ -1,4 +1,4 @@
-"""Stream sort with disorder metrics — the diagnostic face of LIR Sort."""
+"""Stream sort with disorder metrics - the diagnostic face of LIR Sort."""
 
 from dataclasses import dataclass, field
 from typing import Iterable, Iterator
@@ -53,7 +53,7 @@ def perturbed_stream_sort_with_metrics(
 
     Pass an existing DisorderMetrics instance to aggregate across multiple
     stream segments. A new one is created if none is provided (and discarded
-    after the call — retrieve it via the generator's .metrics attribute).
+    after the call - retrieve it via the generator's .metrics attribute).
 
     Usage::
 

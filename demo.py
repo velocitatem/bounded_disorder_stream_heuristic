@@ -41,7 +41,7 @@ print(f"  passes: {passes}")
 
 # ── demo 2: already-sorted data exits in one pass ────────────────────────────
 
-header("2 · Already-sorted input — one pass")
+header("2 · Already-sorted input - one pass")
 
 already = list(range(10))
 _, passes = repair_sort(already)
@@ -50,7 +50,7 @@ print(f"  passes needed: {passes}  (expected 1)")
 
 # ── demo 3: streaming sort on a perturbed stream ─────────────────────────────
 
-header("3 · Streaming sort — perturbed stream (max_lag=3)")
+header("3 · Streaming sort - perturbed stream (max_lag=3)")
 
 stream = [1, 2, 4, 3, 5, 8, 6, 7, 9, 11, 10, 12]
 print(f"  input : {stream}")
@@ -72,7 +72,7 @@ for noise in (1, 3, 6):
 
 # ── demo 5: failure case (lag violated) ──────────────────────────────────────
 
-header("5 · Failure case — item arrives later than max_lag allows")
+header("5 · Failure case - item arrives later than max_lag allows")
 
 bad_stream = [0, 1, 2, 3, 4, 5, 6, -1]
 result = list(perturbed_stream_sort(bad_stream, max_lag=3))
