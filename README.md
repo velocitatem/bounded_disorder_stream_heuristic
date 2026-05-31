@@ -86,18 +86,6 @@ python -m pytest tests/
 ```
 
 
-
-## API
-
-| Function | Module | Description |
-||||
-| `repair_sort(arr)` | `lirsort.batch` | Batch sort; returns `(sorted_list, pass_count)` |
-| `perturbed_stream_sort(stream, max_lag)` | `lirsort.stream` | Streaming sort; yields sorted items |
-| `perturbed_stream_sort_with_metrics(stream, max_lag, metrics)` | `lirsort.metrics` | Streaming sort + fills a `DisorderMetrics` object |
-| `DisorderMetrics` | `lirsort.metrics` | Dataclass: `disorder_score`, `avg_passes_per_window`, `total_inversions`, … |
-
-
-
 ## Known limitation
 
 The bounded-lag assumption is required for correctness. If an item arrives more than `max_lag` positions late, it may be emitted out of order. This is not a bug - it is a fundamental constraint of online sorting without full lookahead.
